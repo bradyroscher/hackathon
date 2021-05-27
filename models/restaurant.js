@@ -10,3 +10,5 @@ const Restaurant = new Schema({
   menuItem2: { type: Object, required: true },
   menuItem3: { type: Object, required: true }
 })
+
+module.exports = mongoose.model('restaurants', Restaurant)
