@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import RestaurantCard from '../components/RestaurantCard'
+import Header from '../components/Header'
+import LoadingPage from '../components/LoadingPage'
 
 class Home extends Component {
   constructor() {
@@ -22,6 +24,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <Header />
         <RestaurantCard restaurants={this.state.restaurants} />
       </div>
     )

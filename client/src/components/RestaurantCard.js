@@ -5,7 +5,7 @@ export default class RestaurantCard extends Component {
     const { restaurants } = this.props
     console.log(restaurants)
     return (
-      <div>
+      <div className="restaurant-container">
         {restaurants.map((restaurant) => (
           <div key={restaurant._id}>
             <h1>{restaurant.name}</h1>

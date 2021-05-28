@@ -1,1 +1,25 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background-color: rgb(247, 232, 232);
+}
 
+input {
+  width: 350px;
+  text-align: center;
+}
+
+.restaurant-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid;
+  width: 175px;
+}
+
+.scooter {
+  width: 400px;
+  margin: 0 auto;
+}
