@@ -18,13 +18,3 @@ export default class RestaurantCard extends Component {
     )
   }
 }
-
-// name, distance, category, rating, menuItem1, menuItem2, menuItem3
-
-/* <div className="img-wrapper">
-<img alt="image" src={image} />
-</div>
-<div className="info-wrapper flex-col">
-<h3>{name}</h3>
-<p>{rating}</p>
-</div> */
