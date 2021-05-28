@@ -8,6 +8,7 @@ const main = async () => {
   const restaurants = [
     {
       name: 'Mcdonalds',
+      img: 'https://i.imgur.com/gLsuqM6.jpg',
       distance: '1.2 miles',
       category: 'Burgers',
       rating: '3.2 Stars',
@@ -17,6 +18,7 @@ const main = async () => {
     },
     {
       name: 'PokeBowl',
+      img: 'https://i.imgur.com/jlcNE4w.png',
       distance: '2.5 miles',
       category: 'Asian',
       rating: '4.8 Stars',
@@ -26,6 +28,7 @@ const main = async () => {
     },
     {
       name: "Nando's",
+      img: 'https://i.imgur.com/cImVT0x.png',
       distance: '1.5 miles',
       category: 'Chicken',
       rating: '4.5 stars',
@@ -35,6 +38,7 @@ const main = async () => {
     },
     {
       name: 'Jinya',
+      img: 'https://i.imgur.com/Npwl1RT.jpg',
       distance: '3 miles',
       category: 'Asian',
       rating: '4.6 Stars',
@@ -44,6 +48,7 @@ const main = async () => {
     },
     {
       name: "Uncle Julio's",
+      img: 'https://i.imgur.com/JbSm9DS.png',
       distance: '1 mile',
       category: 'Mexican',
       rating: '4 stars',
@@ -52,7 +57,8 @@ const main = async () => {
       menuItem3: { name: 'Chicken Enchiladas', price: '$18.00' }
     },
     {
-      name: "Popeye's",
+      name: 'Popeyes',
+      img: 'https://i.imgur.com/jlcNE4w.png',
       distance: '2.2 miles',
       category: 'Chicken',
       rating: '3.2 Stars',
@@ -62,6 +68,7 @@ const main = async () => {
     },
     {
       name: 'Taco Bell',
+      img: 'https://i.imgur.com/qJB4t2M.png',
       distance: '1.6 miles',
       category: 'Mexican',
       rating: '2.7 stars',
@@ -71,6 +78,7 @@ const main = async () => {
     },
     {
       name: 'Burger Shack',
+      img: 'https://i.imgur.com/ElprvfG.png',
       distance: '4 miles',
       category: 'Burgers',
       rating: '4.1 stars',
@@ -80,6 +88,7 @@ const main = async () => {
     },
     {
       name: 'Matsu Sushi',
+      img: 'https://i.imgur.com/qpmPemI.jpg',
       distance: '5 miles',
       category: 'Asian',
       rating: '4.9 stars',
@@ -89,6 +98,7 @@ const main = async () => {
     },
     {
       name: 'Chipotle',
+      img: 'https://i.imgur.com/lqWuzpD.png',
       distance: '2.2 miles',
       category: 'Mexican',
       rating: '3.2 stars',
@@ -98,6 +108,7 @@ const main = async () => {
     },
     {
       name: 'Subway',
+      img: 'https://i.imgur.com/Vuzq9Hy.png',
       distance: '3.7 miles',
       category: 'Subs',
       rating: '2.1 Stars',
@@ -107,6 +118,7 @@ const main = async () => {
     },
     {
       name: "Jersey Mike's",
+      img: 'https://i.imgur.com/2hdJZ1o.png',
       distance: '2.6 miles',
       category: 'Subs',
       rating: '3.5 miles',
@@ -116,6 +128,7 @@ const main = async () => {
     },
     {
       name: "Two Amigo's",
+      img: 'https://i.imgur.com/PP6OwPz.png',
       distance: '6 miles',
       category: 'Mexican',
       rating: '0.5 stars',
@@ -125,6 +138,7 @@ const main = async () => {
     },
     {
       name: 'King Pollo',
+      img: 'https://i.imgur.com/mld1CVu.jpg',
       distance: '3.9 miles',
       category: 'Chicken',
       rating: '3.8 stars',
@@ -134,6 +148,7 @@ const main = async () => {
     },
     {
       name: "Sanitini's",
+      img: 'https://i.imgur.com/s6JxJrs.png',
       distance: '4.5 miles',
       category: 'Subs',
       rating: '4.3 stars',
@@ -143,6 +158,7 @@ const main = async () => {
     },
     {
       name: 'KFC',
+      img: 'https://i.imgur.com/xTiwu7y.png',
       distance: '3.3 miles',
       category: 'Chicken',
       rating: '1.2 stars',
@@ -152,6 +168,7 @@ const main = async () => {
     },
     {
       name: 'Five Guys',
+      img: 'https://i.imgur.com/ptx13nh.png',
       distance: '2.4 miles',
       category: 'Burgers',
       rating: '3.4 stars',
