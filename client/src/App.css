@@ -178,10 +178,13 @@ input {
 }
 
 .add-your-own {
-  color: white;
+  color: black;
   font-family: 'Kumbh Sans', sans-serif;
   text-decoration: none;
-  margin-botton: ;
+}
+
+.add-your-own:hover {
+  color: tomato;
 }
 
 .form-page {
