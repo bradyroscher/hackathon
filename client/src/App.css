@@ -183,3 +183,10 @@ input {
   flex-direction: column;
   align-items: center;
 }
+
+.add-your-own {
+  color: white;
+  font-family: 'Kumbh Sans', sans-serif;
+  text-decoration: none;
+  margin-top: 1000px;
+}

@@ -1,21 +1,24 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 
 export default class Header extends Component {
   render() {
     return (
       <header>
         <nav>
-          <form>
+          <form onSubmit={this.props.handleClick}>
             <input
               className="home-input"
               type="text"
               placeholder="tell us what you're craving"
               onChange={this.props.handleChange}
             ></input>
-            <button className="submit-btn" onClick={this.props.handleClick}>
-              scoot
-            </button>
+            <button className="submit-btn">scoot</button>
+            <br />
+            <NavLink className="add-your-own" to="/add">
+              don't see what you're looking for? add your own restaurant
+            </NavLink>
           </form>
         </nav>
       </header>

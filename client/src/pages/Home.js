@@ -9,14 +9,21 @@ class Home extends Component {
     this.state = {
       restaurants: [],
       searchedInput: '',
-      searched: false
+      searched: false,
+      searchedRestaurants: []
     }
   }
 
   handleClick = async (e) => {
+    e.preventDefault()
     await this.setState({ searched: true })
     console.log(this.state.searched)
-    console.log('hi')
+    console.log(this.state.searchedInput)
+    const res = await axios.get(
+      `http://localhost:3001/api/restaurants/search/${this.state.searchedInput}`
+    )
+    console.log(res.data)
+    this.setState({ searchedRestaurants: res.data })
   }
 
   getRestaurants = async () => {
@@ -28,13 +35,15 @@ class Home extends Component {
     this.getRestaurants()
   }
 
-  handleChange = (e) => {
-    this.setState({ searchedInput: e.target.value })
+  handleChange = async (e) => {
+    await this.setState({ searchedInput: e.target.value })
     console.log(this.state.searchedInput)
+    const res = await axios.get(`http://localhost:3001/api/restaurants`)
   }
 
-  cartRedirect = (e) => {
-    this.props.history.push(`/cart`)
+  cartRedirect = async (e) => {
+    await this.props.history.push(`/cart`)
+    console.log(e.target)
   }
 
   render() {
@@ -58,6 +67,7 @@ class Home extends Component {
           restaurants={this.state.restaurants}
           searchedInput={this.state.searchedInput}
           searched={this.state.searched}
+          searchedRestaurants={this.state.searchedRestaurants}
         />
       </div>
     )
