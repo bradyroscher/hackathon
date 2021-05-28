@@ -2,29 +2,34 @@ import React, { Component } from 'react'
 
 export default class RestaurantCard extends Component {
   render() {
-    const { restaurants } = this.props
-    console.log(restaurants)
+    const { restaurants, searchedInput, searched, cartRedirect } = this.props
+    console.log(searchedInput)
+    console.log(searched)
+
     return (
-      <div>
-        {restaurants.map((restaurant) => (
-          <div key={restaurant._id}>
-            <h1>{restaurant.name}</h1>
-            <h2>{restaurant.category}</h2>
-            <h3>{restaurant.distance}</h3>
-            <h3>{restaurant.rating}</h3>
-          </div>
-        ))}
+      <div className="main-container">
+        {!searched ? (
+          restaurants.map((restaurant) => (
+            <div
+              onClick={cartRedirect}
+              key={restaurant._id}
+              className="restaurant-container"
+            >
+              <div className="restaurant-text">
+                <h1>{restaurant.name}</h1>
+                <img className="restaurant-image" src={restaurant.img}></img>
+                <br />
+                <h3>
+                  {restaurant.rating} || {restaurant.distance}{' '}
+                  {restaurant.category}
+                </h3>
+              </div>
+            </div>
+          ))
+        ) : (
+          <div>Hello!</div>
+        )}
       </div>
     )
   }
 }
-
-// name, distance, category, rating, menuItem1, menuItem2, menuItem3
-
-/* <div className="img-wrapper">
-<img alt="image" src={image} />
-</div>
-<div className="info-wrapper flex-col">
-<h3>{name}</h3>
-<p>{rating}</p>
-</div> */
