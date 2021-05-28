@@ -22,9 +22,32 @@ const findRestaurants = async (req, res) => {
   }
 }
 
-// const addRestaurants
+const findCategories = async (req, res) => {
+  try {
+    const { name } = req.params
+    const restaurant = await Restaurant.find({ category: name })
+    if (!restaurant) {
+      return res.status(404).send('Unable to find restaurant')
+    }
+    res.status(201).json(restaurant)
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+}
+
+const addRestaurant = async (req, res) => {
+  try {
+    const restaurant = await new Restaurant(req.body)
+    await restaurant.save()
+    return res.status(200).json({ restaurant })
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+}
 
 module.exports = {
   getRestaurants,
-  findRestaurants
+  findRestaurants,
+  findCategories,
+  addRestaurant
 }
