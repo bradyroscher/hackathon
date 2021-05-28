@@ -17,7 +17,7 @@ export default class RestaurantCard extends Component {
         {!searched ? (
           restaurants.map((restaurant) => (
             <div
-              onClick={cartRedirect}
+              onClick={() => cartRedirect(restaurant)}
               key={restaurant._id}
               className="restaurant-container"
             >
@@ -33,11 +33,7 @@ export default class RestaurantCard extends Component {
             </div>
           ))
         ) : (
-          <div
-            onClick={cartRedirect}
-            key={searchedRestaurants._id}
-            className="restaurant-container"
-          >
+          <div key={searchedRestaurants._id} className="restaurant-container">
             <div className="restaurant-text">
               <h1>{searchedRestaurants.name}</h1>
               <img
