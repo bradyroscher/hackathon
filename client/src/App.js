@@ -42,7 +42,7 @@ class App extends Component {
               />
             )}
           />
-          {/* <Route path="/add" component={Form} /> */}
+          <Route path="/add" component={Form} />
         </Switch>
       </div>
     )
