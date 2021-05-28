@@ -10,7 +10,8 @@ class Home extends Component {
       restaurants: [],
       searchedInput: '',
       searched: false,
-      searchedRestaurants: []
+      searchedRestaurants: [],
+      selectedName: ''
     }
   }
 
@@ -41,11 +42,6 @@ class Home extends Component {
     const res = await axios.get(`http://localhost:3001/api/restaurants`)
   }
 
-  cartRedirect = async (e) => {
-    await this.props.history.push(`/cart`)
-    console.log(e.target)
-  }
-
   render() {
     return (
       <div>
@@ -63,7 +59,7 @@ class Home extends Component {
           handleChange={this.handleChange}
         />
         <RestaurantCard
-          cartRedirect={this.cartRedirect}
+          cartRedirect={this.props.cartRedirect}
           restaurants={this.state.restaurants}
           searchedInput={this.state.searchedInput}
           searched={this.state.searched}
