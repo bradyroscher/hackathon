@@ -3,6 +3,8 @@ import './App.css'
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import SearchResults from './components/SearchResults'
+import ConfirmPage from './components/ConfirmPage'
+import Cart from './pages/Cart'
 
 class App extends Component {
   render() {
@@ -19,6 +21,11 @@ class App extends Component {
             component={(reactRouterProps) => (
               <SearchResults {...reactRouterProps} />
             )}
+          />
+          <Route path="/confirm" component={ConfirmPage} />
+          <Route
+            path="/cart"
+            component={(reactRouterProps) => <Cart {...reactRouterProps} />}
           />
         </Switch>
       </div>

@@ -1,36 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400&display=swap');
+
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  background-color: rgb(247, 232, 232);
+  height: 350px;
+  background-color: rgb(255, 83, 64);
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 input {
-  width: 350px;
+  width: 330px;
   text-align: center;
 }
 
 .main-container {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
   display: flex;
+  /* background-color: rgb(56, 48, 104); */
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  border: 5px solid black;
+  justify-content: space-between;
 }
 
 .restaurant-container {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 0.7em;
   text-align: center;
+  background-color: white;
   border: 1px solid;
-  width: 175px;
+  width: 275px;
+  height: 270px;
   margin: 0;
+  border-color: rgb(235, 185, 176);
+  border-width: fit-content;
+  margin-bottom: 5px;
+  border-radius: 150px;
+  box-shadow: 5px 3px 6px rgb(233, 153, 153);
+  padding-top: 1%;
 }
 
-.scooter {
-  width: 400px;
-  margin: 0 auto;
+.restaurant-container:hover {
+  background-color: rgb(252, 232, 232);
 }
 
 .restaurant-image {
-  width: 75px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.logo-image {
+  width: 80px;
+}
+
+.logo {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 30px;
+}
+
+.home-input {
+  height: 30px;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 25px;
+  border-radius: 8px;
+  border-color: transparent;
+}
+
+.submit-btn {
+  height: 60px;
+  font-family: 'Kumbh Sans', sans-serif;
+  border-radius: 50px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(56, 48, 104);
+  border-color: transparent;
+}
+
+.submit-btn:hover {
+  height: 60px;
+  font-family: 'Kumbh Sans', sans-serif;
+  border-radius: 50px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  border-color: rgb(22, 43, 90);
+  border-width: 2px;
+}
+
+.scooter {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.confirmation {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.you-did-it {
+  font-size: 115px;
+  color: rgb(255, 83, 64);
+}
+
+.cart-div {
+  border: solid black;
+  background-color: white;
+  border-radius: 25px;
+  text-align: center;
+  width: 30%;
+  height: 600px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.cart-form {
+  margin-top: 100px;
+}
+
+.body {
+  padding-top: 100px;
+  background-color: rgb(255, 83, 64);
+  height: 900px;
+  margin-left: -100px;
+  width: 2000px;
+  border: none;
+  margin-top: -100px;
+}
+
+.quantity {
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  border-color: black;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.cart-submit {
+  margin-left: 450px;
+  margin-top: 100px;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgb(255, 83, 64);
+  color: white;
+  border-color: black;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.cart-submit:hover {
+  margin-left: 450px;
+  margin-top: 100px;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(255, 83, 64);
+  border-color: rgb(255, 83, 64);
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.align-center {
+  display: inline;
+  vertical-align: middle;
+}
+
+.restaurant-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

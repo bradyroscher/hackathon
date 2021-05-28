@@ -8,12 +8,15 @@ class Home extends Component {
     super()
     this.state = {
       restaurants: [],
-      searched: ''
+      searchedInput: '',
+      searched: false
     }
   }
 
-  componentDidMount() {
-    this.getRestaurants()
+  handleClick = async (e) => {
+    await this.setState({ searched: true })
+    console.log(this.state.searched)
+    console.log('hi')
   }
 
   getRestaurants = async () => {
@@ -21,29 +24,41 @@ class Home extends Component {
     this.setState({ restaurants: res.data })
   }
 
-  handleChange = (e) => {
-    this.setState({ searched: e.target.value })
-    console.log(this.state.searched)
+  componentDidMount() {
+    this.getRestaurants()
   }
 
-  findRestaurant = async () => {
-    const res = await axios.get(
-      `http://localhost:3001/api/restaurants/search/${this.state.searched}`
-    )
-    console.log(res)
+  handleChange = (e) => {
+    this.setState({ searchedInput: e.target.value })
+    console.log(this.state.searchedInput)
+  }
+
+  cartRedirect = (e) => {
+    this.props.history.push(`/cart`)
   }
 
   render() {
     return (
       <div>
+        <div className="logo">
+          <img
+            className="logo-image"
+            src="https://cdn.dribbble.com/users/1415308/screenshots/3656877/doggy_animation.gif"
+          ></img>
+          <span>scooter eats</span>
+        </div>
         <Header
           {...this.props}
           {...this.state}
-          findRestaurant={this.findRestaurant}
+          handleClick={this.handleClick}
           handleChange={this.handleChange}
         />
-
-        <RestaurantCard restaurants={this.state.restaurants} />
+        <RestaurantCard
+          cartRedirect={this.cartRedirect}
+          restaurants={this.state.restaurants}
+          searchedInput={this.state.searchedInput}
+          searched={this.state.searched}
+        />
       </div>
     )
   }
