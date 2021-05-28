@@ -11,15 +11,26 @@ input {
   text-align: center;
 }
 
-.restaurant-container {
+.main-container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  border: 5px solid black;
+}
+
+.restaurant-container {
   text-align: center;
   border: 1px solid;
   width: 175px;
+  margin: 0;
 }
 
 .scooter {
   width: 400px;
   margin: 0 auto;
+}
+
+.restaurant-image {
+  width: 75px;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class Header extends Component {
   constructor() {
@@ -8,10 +9,14 @@ export default class Header extends Component {
     }
   }
 
-  handleChange = (e) => {
-    console.log(e.target.value)
-    this.setState({ searched: e.target.value })
-  }
+  // handleChange = (e) => {
+  //   this.setState({ searched: e.target.value })
+  //   console.log(e.target.value)
+  // }
+
+  // findRestaurant = () => {
+  //   this.props.history.push('/search')
+  // }
 
   render() {
     return (
@@ -21,8 +26,9 @@ export default class Header extends Component {
             <input
               type="text"
               placeholder="Search by restaurant or what you're craving"
-              onChange={this.handleChange}
+              onChange={this.props.handleChange}
             ></input>
+            <button onClick={this.props.findRestaurant}>Submit</button>
           </form>
         </nav>
       </header>
