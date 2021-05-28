@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import SearchResults from './components/SearchResults'
 import ConfirmPage from './components/ConfirmPage'
 import Cart from './pages/Cart'
+import Form from './pages/Form'
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
             path="/cart"
             component={(reactRouterProps) => <Cart {...reactRouterProps} />}
           />
+          <Route path="/add" component={Form} />
         </Switch>
       </div>
     )
